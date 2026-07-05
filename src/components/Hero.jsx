@@ -1,5 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
+// 1. Import the image directly so Vite handles the GitHub Pages path
+import profileImg from './profile.jpg';
 
 const Hero = () => {
   const comp = useRef();
@@ -71,9 +73,10 @@ const Hero = () => {
 
         {/* Right Side: Profile Photo */}
         <div className="absolute right-0 bottom-0 md:relative w-full md:w-2/5 h-full opacity-30 md:opacity-100 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700">
+          {/* 2. Use the imported variable inside the src attribute */}
           <img 
             id="hero-image"
-            src="/WhatsApp Image 2026-07-01 at 17.24.54.jpeg" 
+            src={profileImg} 
             alt="Sumit Chhajed" 
             className="object-cover h-full w-full object-center"
             style={{ maskImage: 'linear-gradient(to right, transparent, black 20%)', WebkitMaskImage: 'linear-gradient(to right, transparent, black 20%)' }}
