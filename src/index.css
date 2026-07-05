@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+/* Hide the default cursor globally for our custom neon cursor */
+* {
+  cursor: none !important;
+}
+
+/* Ensure smooth scrolling when navigating the page */
+html {
+  scroll-behavior: smooth;
+}
